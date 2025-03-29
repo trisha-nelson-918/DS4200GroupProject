@@ -8,49 +8,20 @@
 </head>
 <body>
     
-    <h1> US unemployment rate analysis</h1>
+    <h1> Analysis of Movie Changes Over Time </h1>
 
-    <h3>Overall Introduction</h3>
+    <h3> General Introduction  </h3>
 
-    <p>Understanding the US unemployment rate is crucial for assessing
-        the health of the economy and the well-being of its citizens. 
-        The unemployment rate represents the percentage of people in 
-        labor force who are actively seeking employment but are unable
-        to find jobs. This metric serves as a key indicator of economic
-         performance, reflecting the availability of job opportunities 
-         and the overall level of economic activity. </p>
+    <p> Have you ever noticed how different movies are nowadays? With the evolution of new technologies, such as advanced CGI and deep fakes, modern-day movies are drastically different from those made in the previous generations. In addition, the sheer number of movies being created and production budgets have skyrocketed within the past few years.  </p>
 
-    <p>Monitoring the unemployment rate provides insights into 
-        various aspects of the economy, such as consumer spending,
-         business confidence, and government policies' effectiveness.
-        A high unemployment rate may indicate economic downturns, 
-        leading to decreased consumer spending, reduced business 
-        investments, and potential social unrest. Conversely, 
-        a low unemployment rate signifies a robust economy with 
-        ample job opportunities, contributing to higher consumer 
-        confidence and economic growth.</p>
+    <p>Examination of modern-day movie preferences can reflect numerous things about how society as a whole has shifted its perception of the world and what is deemed socially acceptable at the given time. A movie’s success can only be determined by its audience, which makes it important for major film production companies to extrapolate what aspects of film their audiences enjoy and how those aspects change over time. </p>
 
-    <p>Several social factors are closely related to the unemployment
-         rate. Persistent unemployment can lead to financial hardships,
-          increased poverty rates, and reduced access to essential 
-          services, such as healthcare and education. Moreover, 
-          unemployment may exacerbate existing social inequalities, 
-          disproportionately affecting marginalized communities, 
-          including minorities, youth, and individuals with lower 
-          educational attainment.</p>
+    <p> Studies by large organizations, such as <a href=https://www.forbes.com/sites/quora/2014/02/11/how-has-movie-marketing-and-distribution-evolved-over-time/">Forbes</a>, have demonstrated that producers are perceptive to the opinions of their audiences, and consequently produce movies to accommodate those opinions. In other words, public perception is responsible for changing the direction of the movie industry and how we consume media as a whole. Understanding how the public interacts with modern day film can be the key to keeping the era of modern day film alive.</p>
 
-    <p>To learn more about the US unemployment rate and its implications,
-         you can visit the <a href="https://www.bls.gov/">Bureau of Labor Statistics website</a> or explore 
-         analysis reports from reputable research organizations like 
-         <a href="https://www.pewresearch.org/">Pew Research Center</a>.</p>
 
     <h3>Introduction to the data</h3>
 
-    <p> Our analysis makes use of two datasets. the first data is 
-        a data set called `us_statewide_crime.csv` which contains 
-        the following crime statistics for all US states and the 
-        District of Columbia in 2010. The data has 50 rows with 9 
-        features. The detail information about the features are listed
+    <p> We chose to source our dataset from Kaggle, an online platform dedicated to providing a variety of datasets, tools, and resources related to data science. We specifically decided to use the IMDb Movie Data, published by Anand Shaw. IMDb is an online website and community that is deemed to be one of the most popular and wide-spanning sources for movie and television content. This dataset specifically contains detailed information on movies listed on IMDb, including attributes and columns such as the title, genre, rating, release year, and important keyword categories. The detailed information about all this dataset's features are listed
         in the following table:</p>  
 
         <div class="center">
@@ -63,69 +34,80 @@
             </thead>
             <tbody>
               <tr>
-                <td class="tg-0lax">State</td>
-                <td class="tg-0lax">State name</td>
+                <td class="tg-0lax">ID</td>
+                <td class="tg-0lax">entry on IMDB</td>
               </tr>
               <tr>
-                <td class="tg-0lax">Violent_Crime</td>
-                <td class="tg-0lax">Violent crime rate (per 100,000 residents)</td>
+                <td class="tg-0lax">title</td>
+                <td class="tg-0lax">Movie Title</td>
               </tr>
               <tr>
-                <td class="tg-0lax">Murder_Rate</td>
-                <td class="tg-0lax">Murder rate (per 100,000 residents)</td>
+                <td class="tg-0lax">vote_average</td>
+                <td class="tg-0lax">The average movie rating given by voters online</td>
               </tr>
               <tr>
-                <td class="tg-0lax">Poverty</td>
-                <td class="tg-0lax">Percent of residents below the poverty rate</td>
+                <td class="tg-0lax">vote_count</td>
+                <td class="tg-0lax">The number of people who rating the movie online</td>
               </tr>
               <tr>
-                <td class="tg-0lax">High_School</td>
-                <td class="tg-0lax">Percent of residents with a high school degree</td>
+                <td class="tg-0lax">Status</td>
+                <td class="tg-0lax">Indicates whether movie was released or not</td>
               </tr>
               <tr>
-                <td class="tg-0lax">College</td>
-                <td class="tg-0lax">Percent of residents with a four-year college degree</td>
+                <td class="tg-0lax">release_date</td>
+                <td class="tg-0lax">The day, month, and year the movie was released (date time format)</td>
               </tr>
               <tr>
-                <td class="tg-0lax">Single_Parent</td>
-                <td class="tg-0lax">Percent of children living in single parent families</td>
+                <td class="tg-0lax">revenue</td>
+                <td class="tg-0lax">The amount of money the movie made in the box office</td>
               </tr>
               <tr>
-                <td class="tg-0lax">Unemployed</td>
-                <td class="tg-0lax">Unemployment rate</td>
+                <td class="tg-0lax">runtime</td>
+                <td class="tg-0lax">Movie length (in mins)</td>
               </tr>
               <tr>
-                <td class="tg-0lax">Metropolitan</td>
-                <td class="tg-0lax">Percent of residents living in a metropolitan area</td>
+                <td class="tg-0lax">adult</td>
+                <td class="tg-0lax">Indicates if the movie was rated R / for adults</td>
               </tr>
+                <td class="tg-0lax">original_language</td>
+                <td class="tg-0lax">the language in which the movie was orginally produced</td>
+              </tr>
+                <td class="tg-0lax">original_title</td>
+                <td class="tg-0lax">the orginal title of the movie before translation (if applicable)</td>
+              </tr>
+                 <td class="tg-0lax">overview</td>
+                <td class="tg-0lax">description of movie plot</td>
+              </tr>
+                <td class="tg-0lax">popularity</td>
+                <td class="tg-0lax">number of moview viewers (per 1000 people)</td>
+              </tr>
+                <td class="tg-0lax">tagline</td>
+                <td class="tg-0lax">top promotional line from movie</td>
+              </tr>
+                <td class="tg-0lax">genre</td>
+                <td class="tg-0lax">genre of movie</td>
+              </tr>
+                <td class="tg-0lax">production_companies/td>
+                <td class="tg-0lax">list of companies that produced movie</td>
+              </tr>
+                <td class="tg-0lax">production_countries</td>
+                <td class="tg-0lax">Movie length (in mins)</td>
+              </tr>
+                <td class="tg-0lax">spoken_languages</td>
+                <td class="tg-0lax">languages spoken in movie</td>
+              </tr>
+                <td class="tg-0lax">keywords</td>
+                <td class="tg-0lax"> one-word descriptions of movie plot </td>
+              </tr>    
             </tbody>
             </table>
         </div>
-        <p>Meanwhile, we also believe that the geographical 
-            information is important when evaluating the unemployment
-            rate. Therefore, we also make use of geographical information 
-            on <a href="https://www.naturalearthdata.com/downloads/">Natural Earth</a>. 
-            The website provides the geographical information for making maps for US states. 
-        </p>
+        <p> The columns that are the most important to our project would be the ‘title’, ‘genres’, ‘vote_count’, ‘vote_average’ to help with determining what movies in what genres score higher, as well as ‘revenue’ and 'budget' to determine what movies performed well, and ‘release_date’, and ‘keywords’. However, this dataset is expansive in size; it contains twenty-one columns and 903263 rows which gives us a great deal of data to sort through and also utilize. Additionally, with this dataset containing hundreds of thousands of observations, it sets up an ideal overview for us to pick what to analyze, in our case being movie genre preference over time. </p>
 
-        <p>To make a better data visualization, we remove the Alaska and Hawaii
-            from the data. Following is an interactive map for the 
-            lower 48 states in US. User can zoom in the map. The color
-            indicates the unemployment rate for each state. When click any 
-            state, other social factors will be revealed for the state. </p>
+        <p> Since we are investigating trends in genre popularity and how they could be influenced by cultural trends, introductions to new kinds of technology, and our consistently evolving surroundings, we want to focus on data ranging from the 2000s to current day. By filtering out films released far before the 1950s and in plans for production and release in the future, we hope to find trends in genre preferences over time. Therefore, in addition to filtering the data to this specific timeframe, we will also be voiding any rows of information consisting of movies that are in the works of being released. Additionally, any rows with missing or incomplete data will be cleaned as a part of pre-processing to ensure that our data visualizations consist of up-to-date and accurate information. Considering that our research question revolved around genres, we will begin our data analysis by grouping movies into their respective categories. Given this plan for our data analysis, we want our visualizations to reflect both timeline based trends and categorial trends </p>
 
-            <div class = 'center'>
-                <iframe src="map.html" width="80%" height="400px" frameborder="0"></iframe>
-            </div>
-            
-            <p>In general, west coast states tend to have higher 
-                unemployment rate. On the east coast, West virginia 
-                and New York state tend to have higher unemplyment rate
-                than the others. In the south, Mississippi and Louisiana
-                are the ones with the much higher unemplyment rate.
-            </p>
 
-        <h3>Overview of the Unemployment rate</h3>
+        <h3>HEADER FOR HISTOGRAM</h3>
         
         <div class = 'container'>
             <div class = 'image'>
@@ -133,74 +115,46 @@
                 <iframe src="histogram/finish.png" width="100%" height="400px" frameborder="0"></iframe>
             </div>
             <div class = 'text'>
-                <p> First, we present an overview of the unemployment rate
-                    for all 50 states. Alaska is the one with the 
-                    highest unemployment rate, which may due to the seasonal 
-                    business in the state. The effectiveness of labor market 
-                    policies and governance structures can influence unemployment 
-                    rates. Washington, D.C., being the seat of government, may 
-                    experience fluctuations in employment related to government 
-                    spending and policies. Mississippi and Louisiana have economies 
-                    that are heavily reliant on sectors such as agriculture, 
-                    manufacturing, and energy. Economic downturns or fluctuations 
-                    in these industries can impact employment opportunities. 
-                    Connecticut, South Dakota and Virginia have the lowest 
-                    unemplyment rate. These states often have diverse economies 
-                    with strong sectors such as technology, healthcare, finance, 
-                    and tourism. A diverse economy can provide more resilience to 
-                    economic downturns.
-                </p>
+                <p> HISTOGRAM DESCRIPTION</p>
             </div>            
         </div>
         
-        <h3> The relationship between unemployment rate and other social factors</h3>
+        <h3> HEADER FOR AMELIA GRAPH</h3>
 
         <div class = 'container'>
             <div class = 'text'>
-                <p>Moreover, we also want to examine the relationship between
-                    unemployment rate and other social factors in the data. All 
-                    features are numerical thus we firts create a correlation
-                    plot to examine whether there are linear relationship between 
-                    unemployment rate with other social factors. Notice that if 
-                    the correlation is small, it only means that there is no potential
-                    linear relationship between two features. 
-                </p>
-                <p>
-                    Based on the correlation plot, among all the features, poverty 
-                    has the strongest correlation with the unemployment rate since
-                    they are both related to the economics. The percentage of single 
-                    parents is the second important feature which inidicates the 
-                    stability of family is also strongly related to the job market. 
-                    The increase of unemployment rate may also related to the increase 
-                    of violent crime and murder rate but has a negative relationship
-                    with education indicators, like the percentage of people who go to
-                    high school and college. The only variable that has no direct linear
-                    relation with the unemployment rate is Metropolitan, which means the 
-                    percent of residents living in a metropolitan area. 
-                </p>
+                <p> DESCRIBE AMELIA GRAPH HERE</p>
+                <p> DESCRIBE AMELIA GRAPH HERE</p>
             </div>
             <div class = 'image'>
                 <img src="correlation_plot.png" width="100%" height="500px" frameborder="0"></img>
             </div>   
         </div>
 
-        <p>We have also create an interactive scatter plot so that 
-            our users can select a couple of states within
-            a certain range of unemployment rate and to see how the 
-            other factors may be related here. 
+        <p>Given the changing economic climate of the past two decades, the budgets allotted to produce movies has substantially increased over the years. How does this increase in movie production budget impact the movie's overall popularity and revenue once it is released? Moreover, what movie genres typically have the biggest budgets and does that help them generate more revenue or popularity? </p>
+
+        <div class = 'center'>
+            <iframe src="DS4200_GroupProject_Scatter.html" width="85%" height="550px" frameborder="0"></iframe>
+        </div>
+
+         <p>The graphs above demonstrate the relationship between movie budget and multiple factors: revenue,popularity,and vote_average. As you can see from the slider bar, movie budgets drastically increase from the years 2000-2024. However, this increase has no overall impact of the amount of revenue produced. Except for a few special cases in which the revenue is very high, revenue stays within the same range even though the budget increases. On the other hand, as budget increases, movie popularity slightly increases. However, even though more people are going to see these movies with higher budgets, their reviews become more polarized. In other words, higher budget movies evoke a wider variety of feelings and opinions than movies with smaller budgets. Overall, these graphs function to demonstrate that higher budgets do not always correlate to 'better' movies. A bigger movie budget is not an indicator for better revenue or better audience reviews, but may attract a larger audience. </p>
+
+        <h3>HEADER FOR TREE MAP</h3>
+
+        <p>
+            DESCRIBE TREEMAP HERE
         </p>
 
         <div class = 'center'>
-            <iframe src="scatter.html" width="85%" height="550px" frameborder="0"></iframe>
+            <iframe src="summary.html" width="95%" height="300px" frameborder="0"></iframe>
         </div>
 
-        <h3>Compare MA to the other states</h3>
+
+
+         <h3>HEADER FOR HEADER FOR SHREYA GRAPH</h3>
 
         <p>
-            Since we are in MA, thus we want to take a closer look between
-            MA and other states. We create the following interactive plot
-            such that user can choose another state to compare with MA and 
-            show the bar plot on each factors. 
+            DESCRIBE SHREYA GRAPH HERE 
         </p>
 
         <div class = 'center'>
@@ -210,20 +164,14 @@
         <h3>Summary and additional work</h3>
 
         <p>
-            In this visualization analysis, we try to explore the US 
-            unemployment rate across states. We also examine the relation
-            between unemployment rate and other social factors. 
-        </p>
-        <p>
-            Unfortunately, this is the 2010 data thus may be different 
-            than the current economics status. Also, unemployment rate 
-            may fluctuate seasonally thus adding a time series analysis
-            will be more informative. 
+            This project aims to examine the everchanging landscape of modern day film and identify the potential influence of specific external factors, such as audience ratings and budget, on this landscape. Unfortunately, this data does not reflect how the industry has been affected by the uprising of private streaming companies. The normalization of household streaming services, such as Netflix or Peacock, has drastically affected the format, budget, and revenue sources of this industry. Furture directions for this project could be searching for additional data containing information about which streaming platforms movies are offered on, in order to properly examine how distrbitiom via streaming platforms affects movie popularity and revenue.
         </p>
 
         <p>If you are interested in the project and want to share more
-            opinions or resource about the project, please contact:
-            Xiaoyi Yang (xiaoy.yang@northeastern.edu)
+            opinions or resource about the project, please contact any of our group members:
+            Trisha Nelson (nelson.tri@northeastern.edu)
+            Amelia Dsouza (dsouza.a@northeastern.edu)
+            Shreya Srinivasan (srinivasan.sri@northeastern.edu)
         </p>
 
 </body>
