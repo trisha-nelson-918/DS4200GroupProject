@@ -106,4 +106,15 @@
 
         <p> Since we are investigating trends in genre popularity and how they could be influenced by cultural trends, introductions to new kinds of technology, and our consistently evolving surroundings, we want to focus on data ranging from the 2000s to current day. By filtering out films released far before the 1950s and in plans for production and release in the future, we hope to find trends in genre preferences over time. Therefore, in addition to filtering the data to this specific timeframe, we will also be voiding any rows of information consisting of movies that are in the works of being released. Additionally, any rows with missing or incomplete data will be cleaned as a part of pre-processing to ensure that our data visualizations consist of up-to-date and accurate information. Considering that our research question revolved around genres, we will begin our data analysis by grouping movies into their respective categories. Given this plan for our data analysis, we want our visualizations to reflect both timeline based trends and categorial trends </p>
 </body>
+
+     <button id = 'navigateButton' > Explore Movie Data Analysis </button>
+
+    <script>
+        const navigateButton = document.getElementById('navigateButton');
+        navigateButton.addEventListener('click', () => {
+            window.location.href = 'graph_page.html';
+        });
+    </script>
+
+    
 </html>
