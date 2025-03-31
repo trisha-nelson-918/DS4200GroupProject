@@ -6,19 +6,22 @@
     <title>Movie Changes Over Time</title>
     <link href="style.css" rel="stylesheet" />
 </head>
-<body>
-    
-    <h1> Analysis of Movie Changes Over Time </h1>
+<h1> Analysis of Movie Changes Over Time </h1>
 
-    
-     <button id = 'navigateButton' > Explore Movie Data Analysis </button>
+    <button id="navigateButton1"> Explore Movie Data Analysis </button>
+    <button id="navigateButton2"> More Information </button>
 
     <script>
-        const navigateButton = document.getElementById('navigateButton');
-        navigateButton.addEventListener('click', () => {
+        document.getElementById('navigateButton1').addEventListener('click', () => {
             window.location.href = 'graph_page.html';
         });
+
+        document.getElementById('navigateButton2').addEventListener('click', () => {
+            window.location.href = 'contact_info_page.html';
+        });
     </script>
+</body>
+</html>
 
     <h3> General Introduction  </h3>
 
