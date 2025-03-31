@@ -1,128 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Changes Over Time</title>
-    <link href="style.css" rel="stylesheet" />
+    <title>Duchenne Muscular Dystrophy</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <h1> Analysis of Movie Changes Over Time </h1>
-
-    <h3> General Introduction  </h3>
-
-    <p> Have you ever noticed how different movies are nowadays? With the evolution of new technologies, such as advanced CGI and deep fakes, modern-day movies are drastically different from those made in the previous generations. In addition, the sheer number of movies being created and production budgets have skyrocketed within the past few years.  </p>
-
-    <p>Examination of modern-day movie preferences can reflect numerous things about how society as a whole has shifted its perception of the world and what is deemed socially acceptable at the given time. A movie’s success can only be determined by its audience, which makes it important for major film production companies to extrapolate what aspects of film their audiences enjoy and how those aspects change over time. </p>
-
-    <p> Studies by large organizations, such as <a href=https://www.forbes.com/sites/quora/2014/02/11/how-has-movie-marketing-and-distribution-evolved-over-time/">Forbes</a>, and, <a href=https://medium.com/@TheRewindZone/the-evolution-of-movie-genres-examining-shifts-in-popularity-and-diversity-from-the-90s-to-today-ca1ffd1ca445/">Medium</a>, have demonstrated that producers are perceptive to the opinions of their audiences, and consequently produce movies to accommodate those opinions. In other words, public perception is responsible for changing the direction of the movie industry and how we consume media as a whole. Understanding how the public interacts with modern day film can be the key to keeping the era of modern day film alive.</p>
-
-
-    <h3>Introduction to the data</h3>
-
-    <p> We chose to source our dataset from Kaggle, an online platform dedicated to providing a variety of datasets, tools, and resources related to data science. We specifically decided to use the <a href=https://www.kaggle.com/datasets/anandshaw2001/imdb-data">IMDb Movie Data</a>, published by Anand Shaw. IMDb is an online website and community that is deemed to be one of the most popular and wide-spanning sources for movie and television content. This dataset specifically contains detailed information on movies listed on IMDb, including attributes and columns such as the title, genre, rating, release year, and important keyword categories. The detailed information about all this dataset's features are listed
-        in the following table:</p>  
-
-        <div class="center">
-        <table class="tg">
-            <thead>
-              <tr>
-                <th class="tg-0lax">Variable Name</th>
-                <th class="tg-0lax">Details</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="tg-0lax">ID</td>
-                <td class="tg-0lax">entry on IMDB</td>
-              </tr>
-              <tr>
-                <td class="tg-0lax">title</td>
-                <td class="tg-0lax">Movie Title</td>
-              </tr>
-              <tr>
-                <td class="tg-0lax">vote_average</td>
-                <td class="tg-0lax">The average movie rating given by voters online</td>
-              </tr>
-              <tr>
-                <td class="tg-0lax">vote_count</td>
-                <td class="tg-0lax">The number of people who rated the movie online</td>
-              </tr>
-              <tr>
-                <td class="tg-0lax">Status</td>
-                <td class="tg-0lax">Indicates whether movie was released or not</td>
-              </tr>
-              <tr>
-                <td class="tg-0lax">release_date</td>
-                <td class="tg-0lax">The day, month, and year the movie was released (date time format)</td>
-              </tr>
-              <tr>
-                <td class="tg-0lax">revenue</td>
-                <td class="tg-0lax">The amount of money the movie made in the box office</td>
-              </tr>
-              <tr>
-                <td class="tg-0lax">runtime</td>
-                <td class="tg-0lax">Movie length (in mins)</td>
-              </tr>
-              <tr>
-                <td class="tg-0lax">adult</td>
-                <td class="tg-0lax">Indicates if the movie was rated R / for adults</td>
-              </tr>
-                <td class="tg-0lax">original_language</td>
-                <td class="tg-0lax">the language in which the movie was orginally produced</td>
-              </tr>
-                <td class="tg-0lax">original_title</td>
-                <td class="tg-0lax">the orginal title of the movie before translation (if applicable)</td>
-              </tr>
-                 <td class="tg-0lax">overview</td>
-                <td class="tg-0lax">description of movie plot</td>
-              </tr>
-                <td class="tg-0lax">popularity</td>
-                <td class="tg-0lax">number of movie viewers (per 1000 people)</td>
-              </tr>
-                <td class="tg-0lax">tagline</td>
-                <td class="tg-0lax">top promotional line from movie</td>
-              </tr>
-                <td class="tg-0lax">genre</td>
-                <td class="tg-0lax">genre of movie</td>
-              </tr>
-                <td class="tg-0lax">production_companies/td>
-                <td class="tg-0lax">list of companies that produced movie</td>
-              </tr>
-                <td class="tg-0lax">production_countries</td>
-                <td class="tg-0lax">Movie length (in mins)</td>
-              </tr>
-                <td class="tg-0lax">spoken_languages</td>
-                <td class="tg-0lax">languages spoken in movie</td>
-              </tr>
-                <td class="tg-0lax">keywords</td>
-                <td class="tg-0lax"> one-word descriptions of movie plot </td>
-              </tr>    
-            </tbody>
-            </table>
-        </div>
-        <p> The columns that are the most important to our project would be the ‘title’, ‘genres’, ‘vote_count’, ‘vote_average’ to help with determining what movies in what genres score higher, as well as ‘revenue’ and 'budget' to determine what movies performed well, and ‘release_date’, and ‘keywords’. However, this dataset is expansive in size; it contains twenty-one columns and 903263 rows which gives us a great deal of data to sort through and also utilize. Additionally, with this dataset containing hundreds of thousands of observations, it sets up an ideal overview for us to pick what to analyze, in our case being movie genre preference over time. </p>
-
-        <p> Since we are investigating trends in genre popularity and how they could be influenced by cultural trends, introductions to new kinds of technology, and our consistently evolving surroundings, we want to focus on data ranging from the 2000s to current day. By filtering out films released far before the 1950s and in plans for production and release in the future, we hope to find trends in genre preferences over time. Therefore, in addition to filtering the data to this specific timeframe, we will also be voiding any rows of information consisting of movies that are in the works of being released. Additionally, any rows with missing or incomplete data will be cleaned as a part of pre-processing to ensure that our data visualizations consist of up-to-date and accurate information. Considering that our research question revolved around genres, we will begin our data analysis by grouping movies into their respective categories. Given this plan for our data analysis, we want our visualizations to reflect both timeline based trends and categorial trends </p>
-
-        
-        <div class = 'center'>
-            <iframe src="summary.html" width="95%" height="300px" frameborder="0"></iframe>
-        </div>
-
-        <h3>Summary and additional work</h3>
-
-        <p>
-            This project aims to examine the everchanging landscape of modern day film and identify the potential influence of specific external factors, such as audience ratings and budget, on this landscape. Unfortunately, this data does not reflect how the industry has been affected by the uprising of private streaming companies. The normalization of household streaming services, such as Netflix or Peacock, has drastically affected the format, budget, and revenue sources of this industry. Furture directions for this project could be searching for additional data containing information about which streaming platforms movies are offered on, in order to properly examine how distrbitiom via streaming platforms affects movie popularity and revenue.
-        </p>
-
-        <p>If you are interested in the project and want to share more
-            opinions or resource about the project, please contact any of our group members:
-            Trisha Nelson (nelson.tri@northeastern.edu)
-            Amelia Dsouza (dsouza.a@northeastern.edu)
-            Shreya Srinivasan (srinivasan.sri@northeastern.edu)
-        </p>
-
+    <header>
+        <h1>All About Duchenne Muscular Dystrophy</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="more.html">About DMD</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>What is Duchenne Muscular Dystrophy?</h2>
+            <p>Duchenne Muscular Dystrophy, or DMD, is a rare neuromuscular genetic disorder that is characterized by progressive heart and skeletal muscle degeneration. DMD mainly affects boys, and symptoms show up at a very young age in their lives. This is due to alteration of the protein dystrophin that acts as a stabilizer for contractions of the muscle, preventing any damage due to contractions. Dystrophin also mediates cell signaling involving transduction and adhesion. Since DMD alters the dystrophin gene, a deletion, point, or duplication mutation occurs so that dystrophin is, as a result not produced and causes severe muscle damage. DMD is an X-linked recessive inheritance disorder, so it is passed onto children by their mother, also referred to as the carrier. DMD affects approximately 6 out of 100,000 individuals in North America and Europe, so it is officially classified as a rare genetic disorder.</p>
+            <p>Research and therapies are ongoing for DMD, with awareness being spread across communities and those who suffer from DMD. You can access more information about the current research on DMD on the “About DMD” page on this website.</p>
+            <p>I have decided to focus my website on DMD, as I am very interested in studying neurological and neuromuscular disorders. DMD is a disorder that interests me in the way it exhibits itself and the inner workings of the disorder.</p>
+            <img src="dmd_img.jpg" alt="DMD Signs Image">
+        </section>
+    </main>
+    <footer id="contact">
+        <h3>Contact Me!</h3>
+        <p>Email me: <a href="mailto:dsouza.am@northeastern.edu">dsouza.am@northeastern.edu</a></p>
+        <p>Follow me on Instagram: <a href="https://instagram.com/dmdawareness" target="_blank">@dmdawareness</a></p>
+    </footer>
 </body>
+
+
 </html>
