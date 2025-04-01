@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,8 +11,8 @@
     <script>
         // Set width and height for the starry sky
         const width = window.innerWidth;
-        const height = 200; // Only top section
-    
+        const height = 200;
+
         // Create SVG container
         const svg = d3.select("body")
             .append("svg")
@@ -21,15 +21,15 @@
             .style("position", "absolute")
             .style("top", "0")
             .style("left", "0");
-    
+
         // Generate random stars
         const numStars = 100;
         const stars = d3.range(numStars).map(() => ({
             x: Math.random() * width,
             y: Math.random() * height,
-            r: Math.random() * 3 + 1 // Varying star size
+            r: Math.random() * 3 + 1
         }));
-    
+
         // Append stars as circles
         svg.selectAll("circle")
             .data(stars)
@@ -40,63 +40,59 @@
             .attr("r", d => d.r)
             .attr("fill", "white")
             .attr("opacity", () => Math.random() * 0.7 + 0.3);
-    
     </script>
 
     <div style="height: 100px;"></div>
     <h1>Findings</h1>
-        
-        <h3>HEADER FOR HISTOGRAM</h3>
-        
-        <div class = 'container'>
-            <div class = 'image'>
-                <!-- <iframe src="histogram/index.html" width="100%" height="400px" frameborder="0"></iframe>-->
-                <iframe src="histogram/finish.png" width="100%" height="400px" frameborder="0"></iframe>
-            </div>
-            <div class = 'text'>
-                <p> HISTOGRAM DESCRIPTION</p>
-            </div>            
+
+    <h3>HEADER FOR HISTOGRAM</h3>
+    <div class='container'>
+        <div class='image'>
+            <!-- <iframe src="histogram/index.html" width="100%" height="400px" frameborder="0"></iframe> -->
+            <iframe src="histogram/finish.png" width="100%" height="400px" frameborder="0"></iframe>
         </div>
-        
-        <h3> HEADER FOR AMELIA GRAPH</h3>
-
-        <div class = 'container'>
-            <div class = 'text'>
-                <p> DESCRIBE AMELIA GRAPH HERE</p>
-                <p> DESCRIBE AMELIA GRAPH HERE</p>
-            </div>
-            <div class = 'image'>
-                <img src="correlation_plot.png" width="100%" height="500px" frameborder="0"></img>
-            </div>   
+        <div class="text">
+            <p>HISTOGRAM DESCRIPTION</p>
         </div>
+    </div>
 
-        <p>Given the changing economic climate of the past two decades, the budgets allotted to produce movies has substantially increased over the years. How does this increase in movie production budget impact the movie's overall popularity and revenue once it is released? Moreover, what movie genres typically have the biggest budgets and does that help them generate more revenue or popularity? </p>
+    <h3>Interactive Scatterplot - How Genre Influences Movie Popularity & Ratings</h3>
+    <div class='container' style='margin-bottom: 0;'>
+        <div style="display: flex; justify-content: center; width: 100%; margin-bottom: 0;">
+            <iframe 
+              src="/Users/ameliadsouza/Documents/ds4200/movie_project1/movie_chart.html" 
+              width="90%" 
+              height="700px" 
+              style="border: none; margin-bottom: 0; display: block;">
+            </iframe>
+          </div>
+    </div>
+    <p style="margin-top: 0;"><b>
+        This interactive scatterplot visualizes the relationship between movie popularity and average user rating and explores how different genres perform in the terms of public perception and reach.
+    </b></p>
+    <p>
+        The x-axis represents popularity as a quantitative field, and the y-axis represents average user rating to show clusters & trends.
+        Color encoding highlights selected genre via a dropdown menu. The rest of the data is greyed out so it is easy to focus on the genre of interest.
+        The scatterplot reveals interesting conclusions, such that popular genres include action, adventure, and comedy, as they dominate in terms of popularity, range, and density but also scatter in rating, indicating a wide range of reception by the audience.
+        Additionally, genres like family, war, and animation show generally lower popularity, but higher ratings, which suggests a niche appeal or movie success without drawing large amounts of viewers.
+        We are able to also notice the genres that have average or lower ratings, such as horror and mystery, suggesting that the movies produced in this genre are either sub-par to viewers or interesting enough to garner higher ratings.
+    </p>
+    
+    <h3>HEADER FOR TRISHA GRAPH</h3>
 
-        <div class = 'center'>
-            <iframe src="DS4200_GroupProject_Scatter.html" width="85%" height="550px" frameborder="0"></iframe>
-        </div>
+    <p>
+        Given the changing economic climate of the past two decades, the budgets allotted to produce movies has substantially increased over the years. How does this increase in movie production budget impact the movie's overall popularity and revenue once it is released? Moreover, what movie genres typically have the biggest budgets and does that help them generate more revenue or popularity?
+    </p>
 
-         <p>The graphs above demonstrate the relationship between movie budget and multiple factors: revenue,popularity,and vote_average. As you can see from the slider bar, movie budgets drastically increase from the years 2000-2024. However, this increase has no overall impact of the amount of revenue produced. Except for a few special cases in which the revenue is very high, revenue stays within the same range even though the budget increases. On the other hand, as budget increases, movie popularity slightly increases. However, even though more people are going to see these movies with higher budgets, their reviews become more polarized. In other words, higher budget movies evoke a wider variety of feelings and opinions than movies with smaller budgets. Overall, these graphs function to demonstrate that higher budgets do not always correlate to 'better' movies. A bigger movie budget is not an indicator for better revenue or better audience reviews, but may attract a larger audience. </p>
+    <div class="center">
+        <iframe src="DS4200_GroupProject_Scatter.html" width="85%" height="550px" frameborder="0"></iframe>
+    </div>
 
-        <h3>HEADER FOR TREE MAP</h3>
+    <p>
+        The graphs above demonstrate the relationship between movie budget and multiple factors: revenue, popularity, and vote_average. As you can see from the slider bar, movie budgets drastically increase from the years 2000-2024. However, this increase has no overall impact on the amount of revenue produced. Except for a few special cases in which the revenue is very high, revenue stays within the same range even though the budget increases. On the other hand, as budget increases, movie popularity slightly increases. However, even though more people are going to see these movies with higher budgets, their reviews become more polarized. In other words, higher budget movies evoke a wider variety of feelings and opinions than movies with smaller budgets. Overall, these graphs function to demonstrate that higher budgets do not always correlate to 'better' movies. A bigger movie budget is not an indicator for better revenue or better audience reviews, but may attract a larger audience.
+    </p>
 
-        <p>
-            DESCRIBE TREEMAP HERE
-        </p>
-
-        <div class = 'center'>
-            <iframe src="summary.html" width="95%" height="300px" frameborder="0"></iframe>
-        </div>
-
-
-
-         <h3>HEADER FOR HEADER FOR SHREYA GRAPH</h3>
-
-        <p>
-            DESCRIBE SHREYA GRAPH HERE 
-        </p>
-
-       
-
-</head>
-<body>
+    <h3>HEADER FOR SHREYA GRAPH</h3>
+    <p>DESCRIBE SHREYA GRAPH HERE</p>
+</body>
+</html>
