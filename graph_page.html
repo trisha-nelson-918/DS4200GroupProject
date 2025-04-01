@@ -1,12 +1,50 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Changes Over Time</title>
     <link href="style.css" rel="stylesheet" />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 <body>
+    <script>
+        // Set width and height for the starry sky
+        const width = window.innerWidth;
+        const height = 200; // Only top section
+    
+        // Create SVG container
+        const svg = d3.select("body")
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height)
+            .style("position", "absolute")
+            .style("top", "0")
+            .style("left", "0");
+    
+        // Generate random stars
+        const numStars = 100;
+        const stars = d3.range(numStars).map(() => ({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            r: Math.random() * 3 + 1 // Varying star size
+        }));
+    
+        // Append stars as circles
+        svg.selectAll("circle")
+            .data(stars)
+            .enter()
+            .append("circle")
+            .attr("cx", d => d.x)
+            .attr("cy", d => d.y)
+            .attr("r", d => d.r)
+            .attr("fill", "white")
+            .attr("opacity", () => Math.random() * 0.7 + 0.3);
+    
+    </script>
+
+    <div style="height: 100px;"></div>
+    <h1>Findings</h1>
         
         <h3>HEADER FOR HISTOGRAM</h3>
         
@@ -58,14 +96,7 @@
             DESCRIBE SHREYA GRAPH HERE 
         </p>
 
+       
 
 </head>
 <body>
-    <button id = 'navigateButton' > Click Here for More Information! </button>
-
-    <script>
-        const navigateButton = document.getElementById('navigateButton');
-        navigateButton.addEventListener('click', () => {
-            window.location.href = 'contact_info_page.html';
-        });
-    </script>
