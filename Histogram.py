@@ -63,3 +63,6 @@ fig = px.bar(
 fig.update_traces(textposition='outside')
 
 fig.show()
+
+# save as HTML
+fig.write_html("movies_histogram.html")
