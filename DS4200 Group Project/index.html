@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -35,6 +35,9 @@
 
     <p> We chose to source our dataset from Kaggle, an online platform dedicated to providing a variety of datasets, tools, and resources related to data science. We specifically decided to use the <strong> <a href="https://www.kaggle.com/datasets/anandshaw2001/imdb-data">IMDb Movie Data</a> </strong>, published by Anand Shaw. IMDb is an online website and community that is deemed to be one of the most popular and wide-spanning sources for movie and television content. This dataset specifically contains detailed information on movies listed on IMDb, including attributes and columns such as the title, genre, rating, release year, and important keyword categories. The detailed information about all this dataset's features are listed
         in the following table:</p>  
+        <p> The columns that are the most important to our project would be the ‘title’, ‘genres’, ‘vote_count’, ‘vote_average’ to help with determining what movies in what genres score higher, as well as ‘revenue’ and 'budget' to determine what movies performed well, and ‘release_date’, and ‘keywords’. However, this dataset is expansive in size; it contains twenty-one columns and 903263 rows which gives us a great deal of data to sort through and also utilize. Additionally, with this dataset containing hundreds of thousands of observations, it sets up an ideal overview for us to pick what to analyze, in our case being movie genre preference over time. </p>
+
+        <p> Since we are investigating trends in genre popularity and how they could be influenced by cultural trends, introductions to new kinds of technology, and our consistently evolving surroundings, we want to focus on data ranging from the 2000s to current day. By filtering out films released far before the 1950s and in plans for production and release in the future, we hope to find trends in genre preferences over time. Therefore, in addition to filtering the data to this specific timeframe, we will also be voiding any rows of information consisting of movies that are in the works of being released. Additionally, any rows with missing or incomplete data will be cleaned as a part of pre-processing to ensure that our data visualizations consist of up-to-date and accurate information. Considering that our research question revolved around genres, we will begin our data analysis by grouping movies into their respective categories. Given this plan for our data analysis, we want our visualizations to reflect both timeline based trends and categorial trends </p>
 
         <div class="center">
         <table class="tg">
@@ -54,11 +57,11 @@
                 <td class="tg-0lax">Movie Title</td>
               </tr>
               <tr>
-                <td class="tg-0lax">vote_average</td>
+                <td class="tg-0lax">vote average</td>
                 <td class="tg-0lax">The average movie rating given by voters online</td>
               </tr>
               <tr>
-                <td class="tg-0lax">vote_count</td>
+                <td class="tg-0lax">vote count</td>
                 <td class="tg-0lax">The number of people who rated the movie online</td>
               </tr>
               <tr>
@@ -66,7 +69,7 @@
                 <td class="tg-0lax">Indicates whether movie was released or not</td>
               </tr>
               <tr>
-                <td class="tg-0lax">release_date</td>
+                <td class="tg-0lax">release date</td>
                 <td class="tg-0lax">The day, month, and year the movie was released (date time format)</td>
               </tr>
               <tr>
@@ -81,10 +84,10 @@
                 <td class="tg-0lax">adult</td>
                 <td class="tg-0lax">Indicates if the movie was rated R / for adults</td>
               </tr>
-                <td class="tg-0lax">original_language</td>
+                <td class="tg-0lax">original language</td>
                 <td class="tg-0lax">the language in which the movie was orginally produced</td>
               </tr>
-                <td class="tg-0lax">original_title</td>
+                <td class="tg-0lax">original title</td>
                 <td class="tg-0lax">the orginal title of the movie before translation (if applicable)</td>
               </tr>
                  <td class="tg-0lax">overview</td>
@@ -99,13 +102,13 @@
                 <td class="tg-0lax">genre</td>
                 <td class="tg-0lax">genre of movie</td>
               </tr>
-                <td class="tg-0lax">production_companies/td>
+                <td class="tg-0lax">production companies/td>
                 <td class="tg-0lax">list of companies that produced movie</td>
               </tr>
-                <td class="tg-0lax">production_countries</td>
+                <td class="tg-0lax">production countries</td>
                 <td class="tg-0lax">Movie length (in mins)</td>
               </tr>
-                <td class="tg-0lax">spoken_languages</td>
+                <td class="tg-0lax">spoken languages</td>
                 <td class="tg-0lax">languages spoken in movie</td>
               </tr>
                 <td class="tg-0lax">keywords</td>
@@ -114,8 +117,5 @@
             </tbody>
             </table>
         </div>
-        <p> The columns that are the most important to our project would be the ‘title’, ‘genres’, ‘vote_count’, ‘vote_average’ to help with determining what movies in what genres score higher, as well as ‘revenue’ and 'budget' to determine what movies performed well, and ‘release_date’, and ‘keywords’. However, this dataset is expansive in size; it contains twenty-one columns and 903263 rows which gives us a great deal of data to sort through and also utilize. Additionally, with this dataset containing hundreds of thousands of observations, it sets up an ideal overview for us to pick what to analyze, in our case being movie genre preference over time. </p>
-
-        <p> Since we are investigating trends in genre popularity and how they could be influenced by cultural trends, introductions to new kinds of technology, and our consistently evolving surroundings, we want to focus on data ranging from the 2000s to current day. By filtering out films released far before the 1950s and in plans for production and release in the future, we hope to find trends in genre preferences over time. Therefore, in addition to filtering the data to this specific timeframe, we will also be voiding any rows of information consisting of movies that are in the works of being released. Additionally, any rows with missing or incomplete data will be cleaned as a part of pre-processing to ensure that our data visualizations consist of up-to-date and accurate information. Considering that our research question revolved around genres, we will begin our data analysis by grouping movies into their respective categories. Given this plan for our data analysis, we want our visualizations to reflect both timeline based trends and categorial trends </p>
 </body>  
 </html>
