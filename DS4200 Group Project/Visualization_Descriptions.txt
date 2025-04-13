@@ -1,0 +1,25 @@
+The overall goal of our project is to examine how specific factors, such as movie budget or viewer ratings, utlimately effect the types of movies being produced and track changes in movie production over time. To do so, we have created 5 different types of viusalizations:
+
+1) Sankey Diagram
+
+From the three Sankey diagrams, it's clear that the drama genre has consistently held strong over the decades, 
+  from the 2000s to the 2020s—frequently generating around $10 to $50 million in revenue, highlighting its enduring 
+  appeal across generations. Collectively, these shifts reveal how technological evolution and changing audience preferences continue to reshape the cinematic landscape. We designed the Sankey diagram to be interactive, categorizing movies by either their genre or their budget. We chose Sankey diagrams because it makes it easier to visualize distinc categories and their relations to each other.
+
+2) Interactive D3 Bar Chart
+The bar plot, made with D3, represents the average budget put into producing movies across various genres within the iMDb movie dataset. The x-axis consists of the genres while the y-axis consists of the average budget range in dollars ranging from $10 million to $80 million. From this graph, we can conclude that "Adventure", "Science Fiction", "Fantasy", and "Animation" are the most expensive movies to produce, while "Horror", "Documentary", and "TV Movie" genres are less expensive to produce. 
+
+
+3) Interactive Tree Map
+This treemap visualizes the top twenty-five production companies based on total movie revenue, with the size of each box representing total movie earnings and the color representing the average user rating of the companies' productions. Major, well-known production companies like Warner Bros. Pictures, Universal Pictures, and Walt Disney Pictures dominate the biggest space on the treemap, which reflects their mass popularity in the movie industry and their corresponding substantial financial influence. Although still well-known companies, Illumination and DreamWorks Animation take up a bit less space, which could be explained by their more niche movie productions (animation films, family films, etc.) However, the color gradient reveals that high revenue does not always equate to higher audience ratings--some of the larger production companies have lighter shades compared to smaller ones, like Pixar, Marvel Studios, and Heyday Films, all with over a 7.0 user ratings.
+
+
+4) Interactive Scatterplot
+This interactive scatterplot visualizes the relationship between movie popularity and average user rating and explores how different genres perform in the terms of public perception and reach. The x-axis represents popularity as a quantitative field, and the y-axis represents average user rating to show clusters & trends. Color encoding highlights selected genre via a dropdown menu. The rest of the data is greyed out so it is easy to focus on the genre of interest.
+We are able to also notice the genres that have average or lower ratings, such as horror and mystery, suggesting that the movies produced in this genre are either sub-par to viewers or interesting enough to garner higher ratings.
+
+
+
+5) 3 Tiered Scatterplot
+he graphs above demonstrate the relationship between movie budget and multiple factors: revenue, popularity, and vote_average. The slider bar was added so that the user can easily see how trends in movie budgets drastically increase from the years 2000-2024. And by visualizing each graph side by side, it is evident that certain genres, like revenue, remain the same and others, like popularity, start to change with time. Overall, these graphs function to demonstrate that higher budgets do not always correlate to 'better' movies. A bigger movie budget is not an indicator for better revenue or better audience reviews, but may attract a larger audience.
+ 
