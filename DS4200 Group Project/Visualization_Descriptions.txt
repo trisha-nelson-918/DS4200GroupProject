@@ -14,14 +14,12 @@ help viewers see where a branch leads to or starts from (as shown by the source 
 for viewers to see the cumulative incoming and outcoming branches per category, allowing for comparison. 
 
 
-2) Interactive D3 Bar Chart
+2) D3 Bar Chart
 The bar plot, made with D3, represents the average budget put into producing movies across various genres within the iMDb movie dataset. 
 The x-axis consists of the genres while the y-axis consists of the average budget range in dollars ranging from $10 million to $80 million. 
 With the genres at a 45 degree angle, this graph is easily read by viewers and kept neat for presentation. Additionally, the y scale increasing 
-consistently in 10 millions helps with the comparative aspect of bar plots. An added feature to this plot is a change in color when hovering over 
-a bar to draw the viewer's attention to that specific genre and average budget amount, distinguishing it from all others. From this graph, 
-we can conclude that "Adventure", "Science Fiction", "Fantasy", and "Animation" are the most expensive movies to produce, while "Horror", 
-"Documentary", and "TV Movie" genres are less expensive to produce. 
+consistently in 10 millions helps with the comparative aspect of bar plots. From this graph, we can conclude that "Adventure", "Science Fiction", 
+"Fantasy", and "Animation" are the most expensive movies to produce, while "Horror", "Documentary", and "TV Movie" genres are less expensive to produce. 
 
 
 3) Interactive Tree Map
